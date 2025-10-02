@@ -9,11 +9,17 @@ function Hero() {
           Prathmesh Chougule
           <span className="bottom-0 absolute w-full h-[0.6vh] bg-[linear-gradient(90deg,#FF4D6D_0%,#BD3EB2_25%,#7B2FF7_50%,#2F86F7_75%,#2FF7ED_100%)] left-0  z-[-1] "></span>{" "}
         </h1>
-        <h2 className="text-4xl lg:text-[6vw] uppercase font-bold font-heading leading-[1] tracking-tight mt-3 mb-6">
-          Web Development <br />
-          <span className="text-stroke"> & Design </span>{" "}
+        <h2 className="text-4xl lg:text-[4vw] uppercase font-extrabold font-heading leading-[1] tracking-tight mt-3 mb-6">
+          java full stack developer <br />
+          <span className="text-stroke"> & Designer </span>{" "}
         </h2>
-        <GradientButton />
+        <div  className=" lg:flex justify-start items-center gap-4">
+          <GradientButton />
+          <div className="flex gap-4 mt-5 lg:mt-0">
+              <img src="src/assets/LinkedIn_logo_initials.png" alt="CV"  className=" h-15 lg:h-[50px] cursor-pointer"/>
+              <img src="src/assets/image.png" alt=""  className="h-15 lg:h-[50px] cursor-pointer"/>  
+          </div>            
+        </div>
       </div>
       {/* image */}
       <div className="star absolute -z-10 top-90 lg:top-32 right-[-40%] lg:right-[-15%] opacity-40">

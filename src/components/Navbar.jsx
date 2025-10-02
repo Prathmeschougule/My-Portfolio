@@ -2,7 +2,7 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <nav className='fixed w-full'>
+    <nav className='fixed w-full bg-black z-10'>
         <div className='main-container  py-6 flex justify-between  items-center '>
             <img src="src/assets/PC LOGO White.png" alt=""  className='h-12'/>
             <div className='flex flex-col gap-3 cursor-pointer '>
