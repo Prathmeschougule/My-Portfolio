@@ -3,6 +3,7 @@ import Hero from '../section/Hero'
 import About from '../section/About'
 import Experience from '../section/Experience'
 import Project from '../section/Project'
+import Marque from '../section/Marque'
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <About/>
       <Experience/>
       <Project/>
+      <Marque/>
     </>
   )
 }

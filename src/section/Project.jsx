@@ -16,11 +16,11 @@ function Project() {
             </div>  
         </div> 
         
-            <div className="flex gap-4">
+            <div className="flex gap-4  lg:gap-8 ms:4 lg:ms-[30%] mt-6  overflow-hidden">
                 {projects.map(({id,name,link,image})=>(
-                     <a key={id} href={link}>
-                        <img src={image} alt="" />
-                        <span>{name}</span>
+                     <a key={id} href={link} className="relative rounded-2xl w-full min-w-[250px] lg:min-w-[450px]   h-40 lg:h-80 block overflow-hidden group">
+                        <img src={image} alt=""className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                        <span className="absolute top-4 right-4 bg-black text-white uppercase leading-[1.4] font-heading px-5 py-1 rounded-full text-sm lg-text-lg">{name}</span>
                     </a>
                  ))}         
             </div>
