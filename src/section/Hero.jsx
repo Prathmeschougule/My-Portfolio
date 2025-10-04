@@ -1,14 +1,53 @@
-import React from "react";
+import React, { useRef } from "react";
 import GradientButton from "../components/GradientButton";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 
+gsap.registerPlugin(useGSAP,ScrollTrigger,SplitText);
 function Hero() {
+
+  const heroRef = useRef(null);
+
+
+  //pin hero section 
+  useGSAP(()=>{
+    ScrollTrigger.create({
+      trigger:heroRef.current,
+      start:"top top ",
+      end:"bottom top",
+      pin: true,
+      pinSpacing:false,
+      scrub:1
+    })
+
+    const split = new SplitText(heroRef.current.querySelector("h1 .word-text"), {
+      type: "words",
+    });
+
+    gsap.from(split.words, {
+      y: 100,
+      opacity: 0,
+      stagger: 0.2,
+      duration: 0.4,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: heroRef.current,
+        start: "top 80%", // animate when 80% in viewport
+      }
+    });
+  }
+
+  ),[]; 
+
   return (
-    <div className="relative overflow-hidden">
+    <div ref={heroRef} className="relative overflow-hidden">
       <div className="main-container h-screen flex flex-col lg:justify-center items-start lg:py-12 max-lg:pt-40">
         <h1 className="relative text-2xl lg:text-[3.5vw] uppercase font-heading">
-          Prathmesh Chougule
-          <span className="bottom-0 absolute w-full h-[0.6vh] bg-[linear-gradient(90deg,#FF4D6D_0%,#BD3EB2_25%,#7B2FF7_50%,#2F86F7_75%,#2FF7ED_100%)] left-0  z-[-1] "></span>{" "}
-        </h1>
+        <span className="word-text">Prathmesh Chougule</span>
+        <span className="bottom-0 absolute w-full h-[0.6vh] bg-[linear-gradient(90deg,#FF4D6D_0%,#BD3EB2_25%,#7B2FF7_50%,#2F86F7_75%,#2FF7ED_100%)] left-0 z-[1]"></span>
+      </h1>
         <h2 className="text-4xl lg:text-[4vw] uppercase font-extrabold font-heading leading-[1] tracking-tight mt-3 mb-6">
           java full stack developer <br />
           <span className="text-stroke"> & Designer </span>{" "}

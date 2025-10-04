@@ -2,7 +2,7 @@ import React from "react";
 
 function About() {
   return (
-    <div className="h-screen bg-white rounded-tl-[60px] rounded-tr-[60px] ">
+    <div className=" relative z-10 h-screen bg-white rounded-tl-[60px] rounded-tr-[60px] ">
       <h1 className=" about-text main-container text-gray-800 py-8  lg:py-12
        flex justify-center items-center font-heading h-full md:text-3xl lg:text-4xl leading-[1.25]">
         Skilled Java Full Stack Developer with hands-on experience in designing,
