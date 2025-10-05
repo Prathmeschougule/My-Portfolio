@@ -1,11 +1,36 @@
-import React from "react";
+import React, { useRef } from "react";
 import GradientButton2 from "../components/GradientButton2";
 import projects from "../components/projectData";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
-function Project() {
+function Projects() {
+const workRef = useRef(null);
+const projectsRef = useRef(null)
+
+ useGSAP(() => {
+    // Horizontal scroll
+    const projectsWidth = projectsRef.current.scrollWidth;
+    const scrollDistance = projectsWidth - window.innerWidth;
+
+    gsap.to(projectsRef.current, {
+      x: -scrollDistance,
+      ease: "linear",
+      scrollTrigger: {
+        trigger: workRef.current,
+        start: "center center",
+        end: () => `+=${projectsWidth}`,
+        pin: true,
+        scrub: 1,
+        anticipatePin: 1, // prevents flicker on fast scroll
+        invalidateOnRefresh: true,
+      },
+    });
+  }, { scope: workRef });
+
   return (
     <>
-      <div className="h-screen bg-white text-black py-24 lg:py-40 ">
+      <div ref={workRef} className="h-screen bg-white text-black py-24  lg:py-40 overflow-hidden ">
          <div className="main-container pb-8 lg:pb-12 flex max-md:flex-col gap-6 justify-between items-start md:items-end">
             <div className="max-w-xl">
                 <h3>Project</h3>
@@ -15,8 +40,9 @@ function Project() {
                 <GradientButton2 />
             </div>  
         </div> 
-        
-            <div className="flex gap-4  lg:gap-8 ms:4 lg:ms-[30%] mt-6  overflow-hidden">
+
+        <div ref={projectsRef}>
+            <div className="flex gap-4 lg:gap-8 ms-4  mt-6">
                 {projects.map(({id,name,link,image})=>(
                      <a key={id} href={link} className="relative rounded-2xl w-full min-w-[250px] lg:min-w-[450px]   h-40 lg:h-80 block overflow-hidden group">
                         <img src={image} alt=""className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
@@ -24,9 +50,10 @@ function Project() {
                     </a>
                  ))}         
             </div>
+        </div>
       </div>
     </>
   );
 }
 
-export default Project;
+export default Projects;

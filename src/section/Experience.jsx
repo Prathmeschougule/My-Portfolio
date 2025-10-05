@@ -10,7 +10,7 @@ function Experience() {
         </div>
 
         <div className='relative '>
-            <div className='bg-black text-white py-12 lg:py-10'>
+            <div className='bg-black text-white pt-16 lg:pt-20 pb-[25rem] sticky top-4'>
                 <div className='main-container grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-center'>
                     {/* left side */}
                     <div className='flex gap-5 lg:gap-8'>
@@ -26,7 +26,7 @@ function Experience() {
                 </div>
             </div>
 
-            <div className='bg-gray-200 text-black py-12 lg:py-10'>
+            <div className='bg-gray-200 text-black py-16 lg:py-20 sticky '>
                 <div className='main-container grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12 items-center'>
                     {/* left side */}
                     <div className='flex gap-5 lg:gap-8'>

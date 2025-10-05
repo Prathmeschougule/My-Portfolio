@@ -2,8 +2,8 @@ import React from 'react'
 import Hero from '../section/Hero'
 import About from '../section/About'
 import Experience from '../section/Experience'
-import Project from '../section/Project'
 import Marque from '../section/Marque'
+import Projects from '../section/Projects'
 
 function Home() {
   return (
@@ -11,7 +11,7 @@ function Home() {
       <Hero/>
       <About/>
       <Experience/>
-      <Project/>
+      <Projects/>
       <Marque/>
     </>
   )
