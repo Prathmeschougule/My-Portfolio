@@ -25,7 +25,7 @@ function Navbar() {
     <>
       <nav ref={navbarRef} className='fixed w-full bg-black mix-blend-difference  z-30'>
         <div className='main-container  py-6 flex justify-between  items-center '>
-            <img src="src/assets/PC LOGO White.png" alt=""  className='h-12'/>
+            <img src="/projectImage/PC LOGO White.png" alt=""  className='h-12'/>
             <div onClick={()=> setMenuOpen(!menuOpen)} className='flex flex-col gap-1 cursor-pointer '>
 
                  <span className={`inline-block w-10 lg:w-12 h-0.5 bg-white transition-all duration-300 origin-center ${

@@ -5,8 +5,8 @@ function GradientButton() {
  
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = `/resume.pdf`; // path to your resume
-    link.download = "PRATHMESH-CV.pdf"; // name of the downloaded file
+    link.href = `public/PRATHMESH CHOUGULE CV.pdf`; // path to your resume
+    link.download = "PRATHMESH CHOUGULE CV.pdf"; // name of the downloaded file
     link.click();
   };
 
