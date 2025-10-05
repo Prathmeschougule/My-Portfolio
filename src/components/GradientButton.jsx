@@ -4,10 +4,14 @@ function GradientButton() {
 
  
   const handleDownload = () => {
+    // Ensure the path is correct; it should start with a forward slash and match the file name exactly
+    const fileUrl = "/CV.pdf"; // Path relative to the public folder
     const link = document.createElement("a");
-    link.href = `/PRATHMESH CV.pdf`; // path to your resume
-    link.download = "PRATHMESH-CHOUGULE-CV.pdf"; // name of the downloaded file
+    link.href = fileUrl;
+    link.download = "CV.pdf"; // Name of the downloaded file
+    document.body.appendChild(link); // Append to DOM to ensure compatibility
     link.click();
+    document.body.removeChild(link); // Clean up by removing the link
   };
 
   return (
