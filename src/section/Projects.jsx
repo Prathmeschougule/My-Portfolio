@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import GradientButton2 from "../components/GradientButton2";
-import projects from "../components/projectData";
+import projects from "../components/ProjectData";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 

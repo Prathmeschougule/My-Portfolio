@@ -1,6 +1,6 @@
 import React from 'react'
 import Projects from '../section/Projects'
-import projects from '../components/projectData'
+import projects from '../components/ProjectData'
 
 function Project() {
   return (
