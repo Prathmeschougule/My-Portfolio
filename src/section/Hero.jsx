@@ -97,7 +97,7 @@ function Hero() {
         <div  className="gradient-btn lg:flex justify-start items-center gap-4">
           <GradientButton className="" />
           <div className="flex gap-4 mt-5 lg:mt-0">
-              <a href="https://www.linkedin.com/in/prathmesh-chougule-693710263/"><img src="src/assets/LinkedIn_logo_initials.png" alt="CV"  className=" h-15 lg:h-[50px] cursor-pointer"/></a>
+              <a href="https://www.linkedin.com/in/prathmesh-chougule-693710263/"><img src="/projectImage/LinkedIn_logo_initials.png" alt="CV"  className=" h-15 lg:h-[50px] cursor-pointer"/></a>
              <a href="https://github.com/Prathmeschougule"> <img src="src/assets/image.png" alt=""  className="h-15 lg:h-[50px] cursor-pointer"/></a>  
           </div>            
         </div>
