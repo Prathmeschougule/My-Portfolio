@@ -11,7 +11,7 @@ function Project() {
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 md:mt-12  lg:mt-16'>
                     {projects.map(({id,name,image,link,description})=>(
                       <a key={id} href={link} className= ' overflow-hidden flex flex-col'>
-                          <div className='group overflow-hidden h-[300px] rounded-2xl'>
+                          <div   className='group overflow-hidden h-[300px] rounded-2xl'>
                             <img src={image} alt=""  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                           </div>
                           <span className="uppercase leading-[1.4] lg:text-2xl font-heading mt-4" >{name}</span>
@@ -20,7 +20,6 @@ function Project() {
                     ) )}
                 </div>  
             </div>
-           
         </div>
     </>
     
