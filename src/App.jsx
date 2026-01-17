@@ -1,13 +1,16 @@
-import React from 'react'
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Footer from './pages/Footer'
 import { Route, Routes } from 'react-router-dom'
 import Project from './pages/Project'
+import WhatsApp from './components/WhatsApp';
 
 function App() {
+
   return (
-    <div >
+     <div>
+      <WhatsApp/>
         <>
             <Navbar/>
             <Routes>

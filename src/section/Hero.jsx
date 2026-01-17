@@ -94,6 +94,8 @@ function Hero() {
           java full stack developer <br />
           <span className="text-stroke"> & Designer </span>
         </h2>
+
+          
         <div  className="gradient-btn lg:flex justify-start items-center gap-4">
           <GradientButton className="" />
           <div className="flex gap-4 mt-5 lg:mt-0">
@@ -131,7 +133,10 @@ function Hero() {
               <stop offset="1" stop-color="#2FF7ED" />
             </linearGradient>
           </defs>
+           
         </svg>
+      </div>
+      <div className="cursor bg-amber-500 h-[32px] w-[32px] rounded-full fixed top-0 left-0">
       </div>
     </div>
   );
