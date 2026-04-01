@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/german/:path*",
-      "destination": "https://german-classes-m8c4.vercel.app/#home",
-      "permanent": false
-    }
-  ]
-}
